@@ -10,7 +10,8 @@ class KNN:
 
     def fit(self, x_train, y_train):
         """
-        the method make a dictionary, each label is an index and each index have all his vectors in a list
+        the method initialize group of vectors and a grop of labels for each vector, both groups have the same length,
+        and each vector have its on label follow by there's index in the array
         :param x_train: numpy array
         :param y_train: numpy array
         :return: None
@@ -36,9 +37,9 @@ class KNN:
 
     def predict(self, x_test):
         """
-
-        :param x_test:
-        :return:
+        the method recive new pionts and find to witch labael there belong to
+        :param x_test: array
+        :return:array
         """
         index_lst = []
         for test_vec in x_test:
